@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="title">
+    {{ msg + 'hello' }}
+  </view>
+</view>
