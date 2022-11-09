@@ -1,19 +1,9 @@
 // app.js
-App({
-  onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+import { formatDate } from "./utils/util"
 
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-  },
-  globalData: {
-    userInfo: null
-  }
+App({
+  /** 引用 */
+  require: (v) => require(v),
+  /** 格式化日期 */
+  formatDate,
 })

@@ -3,4 +3,9 @@
   <view class="title">
     {{ msg + 'hello' }}
   </view>
+
+  <view>
+    {{date}}
+  </view>
+    
 </view>

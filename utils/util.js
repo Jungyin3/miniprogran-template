@@ -1,19 +1,33 @@
-const formatTime = date => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
+import dayjs from "dayjs"
 
-  return `${[year, month, day].map(formatNumber).join('/')} ${[hour, minute, second].map(formatNumber).join(':')}`
+/** 格式化值 */
+export function formatValue (v) {
+  if (v === null || typeof v === 'undefined') {
+    return '--'
+  }
+
+  if (typeof v === 'string' && !v) {
+    return '--'
+  }
+
+  if (typeof v === 'number' && Number.isNaN(v)) {
+    return '--'
+  }
+
+  return v
 }
 
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : `0${n}`
-}
+/** 格式化日期 */
+export function formatDate (v, type = 'YYYY-MM-DD HH:mm:ss') {
+  if (!v) {
+    return formatValue()
+  }
 
-module.exports = {
-  formatTime
+  const m = dayjs(v)
+
+  if (!m.isValid()) {
+    return formatValue()
+  }
+
+  return m.format(type || 'YYYY-MM-DD HH:mm:ss')
 }

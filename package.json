@@ -1,6 +1,9 @@
 {
   "dependencies": {
     "@vant/weapp": "^1.10.6",
-    "dayjs": "^1.11.6"
+    "dayjs": "^1.11.6",
+    "miniprogram-computed": "^4.4.0",
+    "mobx-miniprogram": "^4.13.2",
+    "mobx-miniprogram-bindings": "^2.1.5"
   }
 }
