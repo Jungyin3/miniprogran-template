@@ -5,6 +5,8 @@ export const store = observable({
   token: null,
   /** 用户信息 */
   userInfo: {},
+  /** 用户名 */
+  name: '张林',
   /** 全局的一些功能 */
   /**
    * 推荐使用wx.getUserProfile获取用户信息

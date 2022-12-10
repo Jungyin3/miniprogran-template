@@ -20,6 +20,8 @@ Page({
       }
     })
 
+    // console.log(err, '错误信息');
+
     setTimeout(() => {
       store.token = '666'
     }, 3000)

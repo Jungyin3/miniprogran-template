@@ -1,7 +1,7 @@
 .container {
-  color: #f00;
+  color: #00f;
 }
 
 .container .title {
-  font: 14rpx;
+  font: 11rpx;
 }
