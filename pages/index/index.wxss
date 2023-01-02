@@ -1,5 +1,5 @@
 .container {
-  color: #00f;
+  color: #f00;
 }
 
 .container .title {

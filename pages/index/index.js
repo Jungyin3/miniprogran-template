@@ -7,7 +7,7 @@ const { store } = app.require('/store/index');
 Page({
   data: {
     msg: 'forzl小程序',
-    date: app.formatDate(new Date(), 'YYYY-MM-DD')
+    date: app.formatDate(new Date(), 'YYYY-MM-DD HH:mm:ss')
   },
   onLoad () {
     // console.log(store, 'store');

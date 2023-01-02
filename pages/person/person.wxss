@@ -1,1 +1,3 @@
-/* pages/person/person.wxss */
+.title {
+  color: #f00;
+}
