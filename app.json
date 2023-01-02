@@ -1,10 +1,35 @@
 {
-  "pages": ["pages/index/index", "pages/logs/logs"],
+  "pages": ["pages/index/index", "pages/logs/logs", "pages/person/person","pages/message/message"],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "forzl",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./assets/icon/home.png",
+        "selectedIconPath": "./assets/icon/home_check.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "iconPath": "./assets/icon/message.png",
+        "selectedIconPath": "./assets/icon/message_check.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "iconPath": "./assets/icon/person.png",
+        "selectedIconPath": "./assets/icon/person_check.png",
+        "text": "个人中心"
+      }
+    ]
   },
   "usingComponents": {
     "van-icon": "@vant/weapp/icon",
