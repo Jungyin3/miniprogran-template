@@ -1,2 +1,1 @@
-<van-nav-bar left-arrow title="消息" left-text="返回"
-  right-text="按钮" />
+<header title="消息"></header>
