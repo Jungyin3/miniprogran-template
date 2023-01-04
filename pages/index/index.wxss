@@ -3,5 +3,6 @@
 }
 
 .container .title {
-  font: 11rpx;
+  font-size: 11rpx;
+  font-weight: 500;
 }
