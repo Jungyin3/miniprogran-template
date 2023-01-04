@@ -1,0 +1,3 @@
+<picker mode="selector" range="{{columns}}" bind:change="change" bind:cancel="cancel" range-key="{{key}}">
+  <slot></slot>
+</picker>

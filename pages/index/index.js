@@ -23,5 +23,14 @@ Page({
     setTimeout(() => {
       store.token = '666'
     }, 3000)
+  },
+  select(e) {
+    // 操作
+    this.setData({
+      msg: e.detail,
+    })
+  },
+  cancel() {
+    console.log('取消选择');
   }
 })

@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="title">
+  <custom_picker columns="{{[{id: '111', text: '1112'}, {id: '222', text: '2223'}]}}" bind:confirm="select" bind:cancel="cancel">
     {{ msg }}
-  </view>
+  </custom_picker>
 
   <view>
     {{date}}
