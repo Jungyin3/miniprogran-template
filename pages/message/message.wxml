@@ -1,1 +1,5 @@
 <header title="消息"></header>
+
+<van-button type="primary" bind:tap="onClick">按钮</van-button>
+
+<van-toast id="van-toast" />
