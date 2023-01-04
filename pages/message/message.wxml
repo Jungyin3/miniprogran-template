@@ -1,2 +1,2 @@
-<!--pages/message/message.wxml-->
-<text class="title">pages/message/message.wxml</text>
+<van-nav-bar left-arrow title="消息" left-text="返回"
+  right-text="按钮" />

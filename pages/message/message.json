@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "消息"
+  "usingComponents": {
+    "van-nav-bar": "@vant/weapp/nav-bar"
+  },
+  "navigationBarTitleText": "消息",
+  "navigationStyle": "custom"
 }
