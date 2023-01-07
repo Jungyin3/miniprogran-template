@@ -20,14 +20,14 @@ Page({
     })
 
     // console.log(err, '错误信息');
-    setTimeout(() => {
-      store.token = '666'
-    }, 3000)
+    // setTimeout(() => {
+    //   store.token = '666'
+    // }, 3000)
   },
   select(e) {
     // 操作
     this.setData({
-      msg: e.detail,
+      msg: e.detail.text,
     })
   },
   cancel() {
