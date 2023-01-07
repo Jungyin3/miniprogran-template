@@ -1,0 +1,3 @@
+<picker mode="date" start="{{start}}" end="{{end}}" bind:change="change" bind:cancel="cancel">
+  <slot></slot>
+</picker>

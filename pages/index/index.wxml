@@ -4,6 +4,9 @@
     {{ msg }}
   </custom_picker>
 
+  <picker-date>{{ msg }}</picker-date>
+  <picker-time>{{ msg }}</picker-time>
+
   <view>
     {{date}}
   </view>

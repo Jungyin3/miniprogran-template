@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "custom_picker": "../../components/picker/picker",
+    "picker-date": "../../components/picker-date/picker-date",
+    "picker-time": "../../components/picker-time/picker-time",
     "uploader": "../../components/uploader/uploader"
   }
 }
