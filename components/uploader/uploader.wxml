@@ -1,0 +1,2 @@
+<!-- Uploader组件 -->
+<van-uploader accept="{{accept}}" file-list="{{ fileList }}" max-count="{{maxCount}}" deletable="{{ deletable }}" disabled="{{disabled}}" bind:after-read="afterRead" bind:delete="delete" />

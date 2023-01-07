@@ -1,14 +1,18 @@
 // 获取应用实例
 const app = getApp();
-const { axios } = app.require('/utils/axios');
-const { store } = app.require('/store/index');
+const {
+  axios
+} = app.require('/utils/axios');
+const {
+  store
+} = app.require('/store/index');
 
 Page({
   data: {
     msg: 'forzl小程序',
     date: app.formatDate(new Date(), 'YYYY-MM-DD HH:mm:ss')
   },
-  onLoad () {
+  onLoad() {
     // console.log(store, 'store');
     axios({
       url: '/newsInfo/voPage',
@@ -18,11 +22,6 @@ Page({
         size: 9999,
       }
     })
-
-    // console.log(err, '错误信息');
-    // setTimeout(() => {
-    //   store.token = '666'
-    // }, 3000)
   },
   select(e) {
     // 操作
@@ -32,5 +31,9 @@ Page({
   },
   cancel() {
     console.log('取消选择');
+  },
+  // 上传文件成功
+  uploaded(filelist = []) {
+    console.log(filelist);
   }
 })

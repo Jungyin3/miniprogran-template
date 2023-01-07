@@ -7,5 +7,9 @@
   <view>
     {{date}}
   </view>
-    
+
+  <view>
+    <uploader bind:uploaded="uploaded"></uploader>
+  </view>
+
 </view>

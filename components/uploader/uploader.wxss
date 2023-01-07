@@ -1,0 +1,4 @@
+.text {
+  color: #f00;
+  font-size: 29rpx;
+}
