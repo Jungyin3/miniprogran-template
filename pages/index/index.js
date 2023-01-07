@@ -6,6 +6,9 @@ const {
 const {
   store
 } = app.require('/store/index');
+import {
+  vantLoding
+} from "../../utils/toast"
 
 Page({
   data: {
@@ -35,5 +38,8 @@ Page({
   // 上传文件成功
   uploaded(filelist = []) {
     console.log(filelist);
+  },
+  onClick() {
+    vantLoding()
   }
 })

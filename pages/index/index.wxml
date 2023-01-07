@@ -12,4 +12,8 @@
     <uploader bind:uploaded="uploaded"></uploader>
   </view>
 
+  <van-button type="primary" bind:tap="onClick">按钮</van-button>
+
 </view>
+
+<van-toast id="van-toast" />

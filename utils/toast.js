@@ -1,5 +1,7 @@
+import Toast from "@vant/weapp/toast/toast"
+
 // * wx.showToast
-export function wxLoading(duration=3000) {
+export function wxLoading(duration = 3000) {
   wx.showToast({
     icon: 'loading',
     duration,
@@ -7,7 +9,7 @@ export function wxLoading(duration=3000) {
   })
 }
 
-export function wxError(msg, duration=3000) {
+export function wxError(msg, duration = 3000) {
   wx.showToast({
     icon: 'error',
     duration,
@@ -15,7 +17,7 @@ export function wxError(msg, duration=3000) {
   })
 }
 
-export function wxSuccess(msg, duration=3000) {
+export function wxSuccess(msg, duration = 3000) {
   wx.showToast({
     icon: 'success',
     duration,
@@ -23,10 +25,21 @@ export function wxSuccess(msg, duration=3000) {
   })
 }
 
-export function wxToast(msg, duration=3000) {
+export function wxToast(msg, duration = 3000) {
   wx.showToast({
     icon: 'none',
     duration,
     title: msg || ''
+  })
+}
+
+// * vant-weapp Toast 页面内需添加 <van-toast id="van-toast" />
+
+// 相较于wx.Toast() Loding 更好看
+export function vantLoding() {
+  Toast.loading({
+    message: '加载中...',
+    forbidClick: true,
+    duration: 3000
   })
 }
