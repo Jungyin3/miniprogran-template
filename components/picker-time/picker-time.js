@@ -1,5 +1,10 @@
 Component({
   properties: {
+    // mode 1.date 日期 2.time 时间
+    mode: {
+      type: String,
+      value: 'time'
+    },
     start: {
       type: String
     },

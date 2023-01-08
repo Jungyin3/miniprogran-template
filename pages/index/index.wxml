@@ -4,7 +4,7 @@
     {{ msg }}
   </custom_picker>
 
-  <picker-date>{{ msg }}</picker-date>
+  <picker-time mode="date">{{ msg }}</picker-time>
   <picker-time>{{ msg }}</picker-time>
 
   <view>
