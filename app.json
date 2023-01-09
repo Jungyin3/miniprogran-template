@@ -1,5 +1,5 @@
 {
-  "pages": ["pages/index/index", "pages/logs/logs", "pages/person/person","pages/message/message"],
+  "pages": ["pages/index/index", "pages/logs/logs", "pages/person/person", "pages/message/message"],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
@@ -10,8 +10,7 @@
     "color": "#000",
     "selectedColor": "#1296db",
     "backgroundColor": "#fff",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/index/index",
         "iconPath": "./assets/icon/home.png",
         "selectedIconPath": "./assets/icon/home_check.png",

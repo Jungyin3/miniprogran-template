@@ -1,0 +1,3 @@
+<van-search model:value="{{value}}" placeholder="{{placeholder}}" use-action-slot bind:search="onSearch" bind:cancel="onCancel">
+  <view slot="action" bind:tap="onClick">搜索</view>
+</van-search>
