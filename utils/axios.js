@@ -1,5 +1,7 @@
 // 网络请求
-import { tokenReady } from "../store/index"
+import {
+  tokenReady
+} from "../store/index"
 
 /** 
  * 小程序版本
@@ -8,14 +10,18 @@ import { tokenReady } from "../store/index"
  * trial -> 体验版
  * release -> 正式版
  */
-const { miniProgram: { envVersion } } = wx.getAccountInfoSync();
+const {
+  miniProgram: {
+    envVersion
+  }
+} = wx.getAccountInfoSync();
 
 /** 根据环境配置域名 */
 axios.baseURL = {
-  develop: 'https://forzl.cn',
+  develop: 'http://10.36.16.99:8083',
   trial: 'https://forzl.cn',
   release: 'https://forzl.cn'
-}[envVersion];
+} [envVersion];
 
 axios.defaults = {};
 
@@ -55,7 +61,7 @@ const WHITE_URL = [
 ];
 
 /** 还原完整URL */
-export function getUrl (url) {
+export function getUrl(url) {
   // 除去多余斜杠
   if (axios.baseURL.endsWith('/') && url.startsWith('/')) {
     return `${axios.baseURL}${url.slice(1)}`
@@ -65,7 +71,7 @@ export function getUrl (url) {
 }
 
 /** 请求函数 */
-function axios ({
+function axios({
   formatRes,
   formatQus,
 
@@ -85,7 +91,8 @@ function axios ({
     const config = {
       url: _url,
       header: {
-        'content-type': 'application/json' // 默认值
+        'content-type': 'application/json', // 默认值
+        'token': wx.getStorageSync('token')
       },
       ...axios.defaults,
       ...options

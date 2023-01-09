@@ -1,8 +1,17 @@
 // app.js
-import { formatDate, formatValue, promisify, getEventBus } from "./utils/util";
-import { axios } from "./utils/axios"
+import {
+  formatDate,
+  formatValue,
+  promisify,
+  getEventBus
+} from "./utils/util";
+import {
+  axios
+} from "./utils/axios"
 
-import { store } from "./store/index"
+import {
+  store
+} from "./store/index"
 
 App({
   /** 引用 */
@@ -18,11 +27,11 @@ App({
   /** 网络请求库 */
   axios,
 
-  onLaunch () {
+  onLaunch() {
     this.init()
   },
 
-  async init () {
+  async init() {
     // 查看缓存
     promisify(wx.checkSession)()
       .then((res) => {
@@ -47,9 +56,11 @@ App({
       })
   },
 
-  login () {
+  login() {
     return promisify(wx.login)()
-      .then(({ code }) => {
+      .then(({
+        code
+      }) => {
         console.log(`code: ${code}`);
 
         return axios({
@@ -74,7 +85,7 @@ App({
       })
   },
 
-  async getUserInfo (data) {
+  async getUserInfo(data) {
     if (data) {
       // 挂载headers
       if (!axios.defaults.header) {

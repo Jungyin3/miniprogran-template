@@ -1,8 +1,1 @@
-.container {
-  color: #f00;
-}
-
-.container .title {
-  font-size: 31rpx;
-  font-weight: 600;
-}
+.container{color:#f00}.container .title{font-size:31rpx;font-weight:500}
