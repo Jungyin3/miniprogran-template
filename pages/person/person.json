@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "no-content": "../../components/no-content/no-content"
+  },
   "navigationBarTitleText": "个人中心"
 }

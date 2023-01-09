@@ -1,5 +1,5 @@
 <van-nav-bar title="{{title}}" fixed="{{true}}" placeholder="{{true}}" bind:click-left="backHome">
   <view slot="left">
-    <van-icon name="wap-home-o" size="40rpx" />
+    <van-icon name="wap-home-o" size="50rpx" />
   </view>
 </van-nav-bar>

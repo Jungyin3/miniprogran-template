@@ -1,0 +1,18 @@
+.main {
+  padding: 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .img {
+    width: 500rpx;
+    margin-top: 200rpx;
+  }
+
+  .tip {
+    width: 750rpx;
+    text-align: center;
+    color: #999;
+  }
+}

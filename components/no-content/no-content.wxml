@@ -1,0 +1,6 @@
+<view class="main">
+  <image class="img" src="../../assets/icon/info1.png" mode="" />
+  <view class="tip">
+    暂无内容
+  </view>
+</view>

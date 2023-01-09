@@ -1,0 +1,1 @@
+.main{padding:32rpx;display:flex;justify-content:center;align-items:center;flex-wrap:wrap}.main .img{width:500rpx;margin-top:200rpx}.main .tip{width:750rpx;text-align:center;color:#999}
