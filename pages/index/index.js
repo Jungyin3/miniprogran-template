@@ -1,3 +1,6 @@
+import {
+  createStoreBindings
+} from "mobx-miniprogram-bindings"
 // 获取应用实例
 const app = getApp();
 const {
@@ -16,7 +19,12 @@ Page({
     date: app.formatDate(new Date(), 'YYYY-MM-DD HH:mm:ss')
   },
   onLoad() {
-    // console.log(store, 'store');
+    this.storeBindings = createStoreBindings(this, {
+      store,
+      fields: store.keys,
+      actions: ['getUserProfile']
+    })
+    console.log(store, 'store');
     axios({
       url: '/newsInfo/voPage',
       method: 'POST',
@@ -25,6 +33,9 @@ Page({
         size: 9999,
       }
     })
+  },
+  onUnload() {
+    this.storeBindings.destroyStoreBindings();
   },
   select(e) {
     // 操作

@@ -1,8 +1,12 @@
-// components/picker/picker.js
+import {
+  storeBindingsBehavior
+} from "mobx-miniprogram-bindings";
+// 获取应用实例
+import {
+  store
+} from "../../store/index"
 Component({
-  /**
-   * 组件的属性列表
-   */
+  behaviors: [storeBindingsBehavior],
   properties: {
     // * 禁用
     disabled: {
@@ -20,13 +24,23 @@ Component({
       value: 'id'
     }
   },
-
-  /**
-   * 组件的方法列表
-   */
+  lifetimes: {
+    attached() {
+      console.log(this.data);
+    },
+    detached() {
+      this.storeBindings.destroyStoreBindings()
+    }
+  },
+  storeBindings: {
+    store,
+    fileds: store.keys,
+  },
   methods: {
     change(e) {
-      const { value } = e.detail;
+      const {
+        value
+      } = e.detail;
       this.triggerEvent('confirm', this.properties.columns[value])
     },
     cancel() {
